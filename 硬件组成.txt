@@ -1,0 +1,25 @@
+！通用寄存器的名称
+
+32位通用寄存器：
+EAX      Accumulator         累加器
+EBX     Base Address       基址寄存器
+ECX       Counter            计数器
+EDX        Date             数据寄存器
+ESI     Source Index       源变址寄存器
+EDI   Destination Index   目的变址寄存器
+EBP     Base Pointer         基址指针
+ESP     Stack Pointer        堆栈指针
+
+专用寄存器：标志寄存器、指针指令寄存器、段寄存器
+
+指令指针寄存器EIP：保存将要执行的指令在主存的存储器地址
+段寄存器表面某个段在主存中的位置：6个16位段寄存器：CS、DS、SS、ES、FS、GS
+    应用程序主要涉及3类基本段：代码段（CS）、数据段（DS）、堆栈段（SS）
+逻辑地址 = 段基地址：偏移地址
+	段基地址 = 在主存中的起始位置
+	偏移地址 = 距离段基地址的位移量
+	代码段CS+EIP 堆栈段SS+ESP  数据段DS+EA（有效地址）
+操作系统利用存储管理单元MMU将逻辑地址映射为线性地址（虚拟地址）
+	
+	
+汇编语言程序员将硬件抽象为：寄存器、存储器地址和输入输出地址
